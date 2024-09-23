@@ -1,193 +1,248 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-@font-face{
-    font-family: principal;
-    src: url(fonts/jsMath-cmti10.ttf);
+@font-face {
+  font-family: principal;
+  src: url(fonts/jsMath-cmti10.ttf);
 }
 
-@font-face{
-    font-family: secundaria;
-    src: url(fonts/Happy\ Paradise.otf);
+@font-face {
+  font-family: secundaria;
+  src: url(fonts/Happy\ Paradise.otf);
 }
 
-:root{
-    --cor-letra-1: white;
-    --cor-letra-2: black;
-    --margin-center: 0 auto;
-    --cor-secundaria:#00b2da27;
-    --cor-principal:#00B3DA;
+:root {
+  --cor-letra-1: white;
+  --cor-letra-2: black;
+  --margin-center: 0 auto;
+  --cor-secundaria: #00b2da27;
+  --cor-principal: #00b3da;
 }
 
-body,html,main{
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
+body,
+html,
+main {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
+main {
+  display: flex;
+  flex-direction: column;
 }
 
-.flex-center{
-    display: flex;
-    justify-content: center;
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
 
-#logo{
-    margin: 30px 0;
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    box-shadow: 0 0 20px 5px var(--cor-principal);
-    background-image: url(logos/Tela\ Login.png);
-    background-repeat: no-repeat;
-    background-position: -91px -53px;
-    background-size: 380px;
+#logo {
+  margin: 30px 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  box-shadow: 0 0 20px 5px var(--cor-principal);
+  background-image: url(logos/Tela\ Login.png);
+  background-repeat: no-repeat;
+  background-position: -91px -53px;
+  background-size: 380px;
 }
 
 /* Configuração do form */
-form{
-    /* display: flex;
+form {
+  /* display: flex;
     flex-direction: column;*/
-    margin: var(--margin-center);
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 120px 2.5fr 1fr;
+  margin: var(--margin-center);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 120px 2.5fr 1fr;
 }
 
 /* estilização dos input */
-#area_input{
-    flex-direction: column;
-    justify-content: space-around;
+#area_input {
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.input{
-    font-family: 'principal';
-    padding-left: 5px;
-    width: 100%;
-    height: 30px;
-    font-size: 20px;
-    outline: none;
-    border-bottom: 1px solid black;
+/* mundança importante */
+#area_input div{
+  flex-direction: column;
+  margin: var(--margin-center);
+  width: 85%;
 }
 
-#input_senha{
-    margin: var(--margin-center);
-    /* margin-bottom: 10px; */
-    flex-direction: column;
-    width: 85%;
+.input {
+  font-family: "principal";
+  padding-left: 5px;
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  outline: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
 }
 
-#input_email{
-    margin: var(--margin-center);
-    /* margin-bottom: -10px; */
-    width: 85%;
-}
-
-#recuperarSenha{
-    margin-left: 3px;
-    margin-top: 10px;
-    font-size: 12px;
-    /* align-self: flex-start; */
+#recuperarSenha {
+  margin-left: 3px;
+  margin-top: 10px;
+  font-size: 12px;
+  /* align-self: flex-start; */
 }
 
 /* estilização dos botões */
-#botoes{
-    position: static;
-    flex-direction: column;
-    width: 100%;
-    height: 200px;
-    margin-top: 20px;
+#botoes {
+  position: static;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
 }
 
-.btn{
-    font-family: 'principal';
-    font-size: 25px;
-    border-radius: 15px;
-    height: 40px;
-    margin: var(--margin-center);
-    width: 85%;
+.btn {
+  font-family: "principal";
+  font-size: 25px;
+  border-radius: 15px;
+  height: 40px;
+  margin: var(--margin-center);
+  width: 85%;
 }
 
-#btnEntrar{
-    background-color: var(--cor-principal);
-    color: var(--cor-letra-1);
-    margin-bottom: 10px;
+#btnEntrar {
+  background-color: var(--cor-principal);
+  color: var(--cor-letra-1);
+  margin-bottom: 10px;
 }
-#btnCancelar{
-    color: var(--cor-letra-2);
-    background-color: var(--cor-secundaria);
-}
-
-#botoes span{
-    color: var(--cor-letra-2);
-    font-family: 'secundaria';
-    font-weight: bold;
-    text-align: center;
-    margin: 14px;
-    font-size: 12px;
+#btnCancelar {
+  color: var(--cor-letra-2);
+  background-color: var(--cor-secundaria);
 }
 
-#entrar{
-    margin: var(--margin-center);
-    margin-top: 5px;
-    /* display: flex;
+#botoes span {
+  color: var(--cor-letra-2);
+  font-family: "secundaria";
+  font-weight: bold;
+  text-align: center;
+  margin: 14px;
+  font-size: 12px;
+}
+
+#entrar {
+  margin: var(--margin-center);
+  margin-top: 5px;
+  /* display: flex;
     justify-content: space-around;
     margin: 10px 0; */
-    height: 50px;
+  height: 50px;
 }
-.contas{
-    display: inline-block;
-    margin: 0 10px;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
+.contas {
+  display: inline-block;
+  margin: 0 10px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
 }
-#google{
-    background-image: url(logos/pesquisa.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+#google {
+  background-image: url(logos/pesquisa.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-#facebook{
-    background-image: url(logos/facebook.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+#facebook {
+  background-image: url(logos/facebook.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-#instagram{
-    background-image: url(logos/instagram.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+#instagram {
+  background-image: url(logos/instagram.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
-#tiktok{
-    background-image: url(logos/tik-tok.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+#tiktok {
+  background-image: url(logos/tik-tok.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 /* footer */
-footer button{
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.342);
-    color: var(--cor-letra-1);
-    font-size: 30px;
-    font-family: principal;
-    margin-bottom: 25vh;
-    width: 100%;
-    height: 160px;
-    background-color: var(--cor-principal);
-    border-radius: 50% 50% 0 0;
+footer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.342);
+  color: var(--cor-letra-1);
+  font-size: 30px;
+  font-family: principal;
+  margin-bottom: 25vh;
+  width: 100%;
+  height: 160px;
+  background-color: var(--cor-principal);
+  border-radius: 50% 50% 0 0;
 }
-#bloco2{
-    height: 20%;
-    background-color: var(--cor-principal);
+
+#bloco {
+  position: absolute;
+  width: 12ch;
+  height: 2ch;
+}
+#barra {
+  transition: 1s linear;
+  width: 0;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+@keyframes cobrir {
+  0% {
+    border-radius: 0%;
+    width: 12ch;
+    height: 2ch;
+  }
+  30% {
+    border-radius: 100%;
+    width: 4ch;
+    height: 4ch;
+  }
+  100% {
+    margin: 0;
+    border-radius: 0%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer-absolute {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  margin-top: 52.5vh;
+}
+.footer-aument {
+  transition: 2s ease-in-out;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-top: -29vh;
+}
+.button-posi {
+  transition: 2s ease-in-out;
+  border-radius: 0;
+  margin-bottom: 100px;
+  height: 100vh;
+}
+.button-tirar {
+  color: transparent !important;
+  transition: none !important;
+  text-shadow: none !important;
+}
+.esconder{
+  display: none;
 }
 /*
     
